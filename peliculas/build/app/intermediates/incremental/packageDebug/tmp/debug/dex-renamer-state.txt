@@ -1,4 +1,4 @@
-#Wed Mar 11 17:03:24 ART 2020
-base.0=C\:\\Users\\Xappia user\\Desktop\\flutter\\peliculas\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Sun Mar 22 15:30:54 ART 2020
+base.0=C\:\\Users\\nicol\\Desktop\\flutter\\Flutter-peliculas\\peliculas\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

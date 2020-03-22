@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:peliculas/src/models/pelicula_model.dart';
 
 class CardSwiper extends StatelessWidget {
 
-  final List<dynamic> peliculas;
+  final List<Pelicula> peliculas;
 
   CardSwiper({ @required this.peliculas});
 
@@ -20,10 +21,23 @@ class CardSwiper extends StatelessWidget {
         layout      : SwiperLayout.STACK,
         itemCount   : peliculas.length,
         itemBuilder : (BuildContext context,int index){
-          return ClipRRect( // Para redonder las tarjetas 
-            borderRadius: BorderRadius.circular(20.0),
-            child: Image.network("http://via.placeholder.com/350x150" , fit: BoxFit.cover,),
-            //child: Text( peliculas[index].toString()),
+
+          peliculas[index].uniqueId = '${peliculas[index].id}-tarjeta';
+
+          return Hero(
+            tag:peliculas[index].uniqueId,
+            child: ClipRRect( // Para redonder las tarjetas 
+              borderRadius: BorderRadius.circular(20.0),
+              child       : GestureDetector(
+                onTap: () => Navigator.pushNamed(context, 'detalle', arguments: peliculas[index]),
+                child: FadeInImage(
+                  placeholder : AssetImage('assets/img/loading.gif'), 
+                  image       : NetworkImage(peliculas[index].getPosterImg()),
+                  fit         : BoxFit.cover,
+                ),
+              ),
+              //child: Text( peliculas[index].toString()),
+            ),
           );
         },
       ),
