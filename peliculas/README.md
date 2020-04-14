@@ -1,16 +1,18 @@
-# peliculas
+# Peliculas-Flutter
+An Application that shows the most recent films in cinema.
 
-A new Flutter project.
+This app uses the TMDb API, to request the most recent and the most popular films. Also, if you select a movie you can see the cast.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Home page. This page have two lists. In the main list you can see the most recent films. In the bottom list you can see the movies order by popularity.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![HomePage](https://i.ibb.co/JcfCZdq/6a9e1265-9d2c-4857-8b7c-8aa5e503dbd8.jpg)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You select a movie and you can see the description (The text in the image is for testing only).
+
+![MoviePage](https://i.ibb.co/tzB8mNX/07d818fc-3900-41ec-9cb8-7932781d42a2.jpg)
+
+Under the description you can see the movie cast.
+
+![MovieBottomPage](https://i.ibb.co/JnrSTG0/ac05b645-2bdf-4970-a9ea-c2c24b83fce1.jpg)
